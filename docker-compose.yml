@@ -1,0 +1,25 @@
+version: '3.4'
+
+services:
+  suswarriors.application:
+    image: ${DOCKER_REGISTRY-}suswarriorsapplication
+    build:
+      context: .
+      dockerfile: src/SusWarriors.Application/Dockerfile
+    environment:
+      DbOptionsServer__Server: "sqlserver"
+      DbOptionsServer__Port: 1433
+      DbOptionsServer__User: "SA"
+      DbOptionsServer__Password: "P@ssword123"
+      DbOptionsServer__Database: "Identity"
+    ports:
+      - 6500:8080
+      - 6501:8081
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "P@ssword123"
+      MSSQL_PID: Express
+    ports: 
+      - 1433:1433

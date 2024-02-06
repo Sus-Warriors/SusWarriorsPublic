@@ -1,0 +1,6 @@
+@SusWarriors.Application_HostAddress = http://localhost:5274
+
+GET {{SusWarriors.Application_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
