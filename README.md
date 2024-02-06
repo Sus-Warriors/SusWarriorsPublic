@@ -1,5 +1,5 @@
 # Sus Warriors
-Sus Warriors an app to help doctors be more sustainable in the medicines that they prescribe. It has a front-facing UI that is supported by a backend and database.
+Sus Warriors is an app to help doctors be more sustainable in the medicines that they prescribe. It has a front-facing UI that is supported by a backend and database.
 
 ## Front End
 A Microsoft PowerApp Canvas project. It is supported by flows in Power Automate and connections to a backend server as well as an SQL database.
